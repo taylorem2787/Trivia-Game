@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- jQuery CDN -->
 	<script   src="https://code.jquery.com/jquery-3.1.0.js"   integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
 
@@ -10,7 +12,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-S7YMK1xjUjSpEnF4P8hPUcgjXYLZKK3fQW1j5ObLSl787II9p8RO9XUGehRmKsxd" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript --> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -18,6 +20,7 @@
 	<!-- STYLE SHEETS -->
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
 
 	<script src="assets/javascript/game.js"></script>
 </head>
@@ -29,10 +32,7 @@
 	        <div class="col-lg-12">
 	          	<div class="panel panel-default">
 	              	<div class="panel-heading">
-	                	<h3 class="panel-title">Pop Trivia</h3>
-	              	</div>
-	              	<div class="panel-body">
-
+	                	<h1 class="panel-title">Movie Quote Trivia!</h1>
 	              	</div>
 	          	</div>
 	        </div>
@@ -41,25 +41,45 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-			  		<div class="panel-body">
-			  			 <div id="buttons">
-			  			 	<div id="display">00:00</div>
-    						<button id="start"><h2>Start</h2></button>
-   							<button id="stop"><h2>Stop</h2></button>
-  						 </div>
-			  			<div id="game-holder">
-			  				<div class="question"></div>
-			  				<div class="optionOne"></div>
-			  				<div class="optionTwo"></div>
-			  				<div class="optionThree"></div>
-			  				<div class="optionFour"></div>
-			  				
-						</div>
-			  		</div>
-				</div>
-			</div>
-		</div>	
+				  	<div class="panel-body">
+				    	<button id = "start">Start</button>
+							<div id = "testDiv">
+								<div id="questionDisplay">
+								<div id="show-number">15</div>
+    							</div>
+							<div class="container"> 
+  							<!-- <div id="image-holder">
+    							<img id="wows" class="gif" src="assets/images/wows.gif">
 
+    							<img id="joker" class="gif" src="assets/images/joker.gif">
+
+  								</div> -->
+								<!-- INPUT -->
+								<div class = "checkbox">
+									<label for = "firstQ" id ="firstQ"><input type="radio" id="v1" name="q" value="1"></label>
+								</div>
+								<br>
+								<div class = "checkbox">
+									<label for='secondQ' id="secondQ"><input type="radio" id="v2" name="q" value="2"></label>
+								</div>
+								<br>
+								<div class = "checkbox">
+									<label for='thirdQ' id="thirdQ"><input type="radio" id="v3" name="q" value="3"></label>
+								</div>
+								<br>
+								<!-- INPUT END -->
+								<button id="next" type="button">Next</button>
+
+							<!-- <img src="assets/images/final.gif"> -->
+							</div> <!-- container -->
+							</div>	<!-- test div -->
+						<div id = 'finalAnswer'></div>
+						<img id="bm" src="assets/images/final.gif">
+				  	</div>	<!-- panel-body -->
+				</div>	<!-- panel-default -->
+			</div>	<!-- col -->
+		</div> <!-- row -->
+		<!-- SCOREBOARD -->
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
@@ -68,21 +88,10 @@
 		  				<h3> <span class="roundCounter"></span></h3>
 				    	<h3> <span class="winCounter"></span></h3>
 		  				<h3> <span class="lossCounter"></span></h3>
-				  	</div>
-				</div>
-			</div>
-		</div>	
-
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-				  	<div class="panel-body">
-
-   						</div>
-				  	</div>
-				</div>
-			</div>
-		</div>		
+				  	</div>	<!-- panel-body -->
+				</div>	<!-- panel-default -->
+			</div>	<!-- col -->
+		</div> <!-- row -->
 		
 	</div> <!-- container -->
 		  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
